@@ -1,2 +1,16 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>Detalle Tarea <%= @task.id %></h1>
+<br>
+
+
+    <h2><%= @task.title %></h2>
+    <br>
+    <p><%= @task.description %></p>
+    <br>
+    <p>Fecha y hora de creación: <%= @task.created_at %></p>
+    <br>
+    <p>Fecha y hora de última actualización: <%= @task.updated_at %></p>
+
+    <%= link_to "Editar", edit_user_task_path(current_user, @task), class: 'btn btn-primary' %>
+    <%= link_to "Borrar", user_task_path(current_user, @task), class: 'btn btn-danger', method: :delete %>
+
+
