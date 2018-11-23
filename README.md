@@ -23,7 +23,7 @@ For reviewing Bootstrap installation and configuration notes for Rails check [Bo
 
 ## Configuration
 
-This applications runs on development environment from a localhost server and port 3000, for details check [development environment file](config/environment/development.rb) and [server configuration file](config/puma.rb)
+This applications runs on development environment from a localhost server and port 3000, for details check [development environment file](config/environments/development.rb) and [server configuration file](config/puma.rb)
 
 Database server configuration is defined for PostgreSQL 10.5, for modifying parameters and details check [database configuration file](config/database.yml)
 
