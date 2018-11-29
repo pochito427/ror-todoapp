@@ -26,7 +26,7 @@ development:
   <<: *default
   database: todo-app_development
   username: postgres
-  password: fedesoft123
+  password: <%= ENV['DB_PASSWORD'] %>
   host: localhost
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,7 +62,7 @@ test:
   <<: *default
   database: todo-app_test
   username: postgres
-  password: fedesoft123
+  password: <%= ENV['DB_PASSWORD'] %>
   host: localhost
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,4 +87,4 @@ production:
   <<: *default
   database: todo-app_production
   username: todo-app
-  password: <%= ENV['TODO-APP_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
