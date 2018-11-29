@@ -9,7 +9,7 @@ Things you may want to cover:
 
 ## Ruby version
 
-ruby 2.3.3 check [ruby-version file](.ruby-version) 
+ruby 2.3.3 updated to ruby 2.4.5 because of dependencies on Heroku-18, please check [Heroku Ruby Support](https://devcenter.heroku.com/articles/ruby-support) and [Specifying Ruby versions](https://devcenter.heroku.com/articles/ruby-versions) 
 
 ## System dependencies
 
@@ -21,11 +21,17 @@ For reviewing users authentication system check [Devise documentation](https://g
 
 For reviewing Bootstrap installation and configuration notes for Rails check [Bootstrap Ruby Gem documentation](https://www.rubydoc.info/gems/bootstrap/4.1.3)
 
+For reviewing RubyOnRails support on Heroku-18 check [Rails Support](https://devcenter.heroku.com/categories/rails-support)
+
 ## Configuration
 
-This applications runs on development environment from a localhost server and port 3000, for details check [development environment file](config/environments/development.rb) and [server configuration file](config/puma.rb)
+This application runs on development environment from a localhost server and port 3000, for details check [development environment file](config/environments/development.rb) and [server configuration file](config/puma.rb)
 
 Database server configuration is defined for PostgreSQL 10.5, for modifying parameters and details check [database configuration file](config/database.yml)
+
+This application has Figaro gem installed for managing environment configuration variables. Please check [Figaro documentation](https://github.com/laserlemon/figaro)
+
+For production environment configuration instructions, please check this documentation on [Heroku-18](https://devcenter.heroku.com/articles/getting-started-with-rails5)
 
 ## Database creation
 
@@ -37,6 +43,9 @@ rails db:create
 Check if you are on project root directory and run on your console or CLI next command after database creation:
 rails db:migrate
 
+For production environment database, you can run on your console or Heroku CLI next command with optional database creation:
+heroku run rake db:migrate
+
 ## Deployment instructions
 
 Before database creation and initialization, check if you are on project root directory and run on your console or CLI next command for installing dependencies:
@@ -46,6 +55,11 @@ After database creation and initialization, check if you are on project root dir
 rails s
 
 Check on your console or CLI if your localhost server is running, after that, type [localhost:3000](http://localhost:3000) on your browser and check if you can view home page.
+
+For production environment on Heroku-18, you can run on your console or Heroku CLI next command:
+git push heroku master
+
+Please check this documentation for production deployment on [Heroku-18](https://devcenter.heroku.com/articles/getting-started-with-rails5)
 
 ## Routing dependencies
 
